@@ -1,9 +1,6 @@
 import "./style/CartItem.css";
 import { Link } from "react-router-dom";
 
-//Format currency
-// import CurrencyFormat from 'react-currency-format';
-
 const CartItem = ({item}) => {
   return (
     <div className="cartitem">

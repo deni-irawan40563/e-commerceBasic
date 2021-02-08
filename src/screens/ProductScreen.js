@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import CartScreen from "../components/ModalItem";
 import Modal from "../components/Modal";
-// import ImageOnProducts from "../components/ImageOnProduct"
+
 
 //Format currency
 import CurrencyFormat from 'react-currency-format';
@@ -30,7 +30,6 @@ const ProductScreen = ({ match, history }) => {
 
   const addToCartHandler = () => {
     dispatch(addToCart(product._id, qty));
-    // history.push(`/cart`);
   };
   const [show, setShow] = useState(false);
   return (
