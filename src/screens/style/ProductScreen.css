@@ -1,0 +1,111 @@
+.product-screen {
+  display: grid;
+  grid-template-areas: "left right"
+                        "footer footer";
+  grid-template-columns: 1fr 5fr;
+  max-width: 1300px;
+  margin: 1rem auto;
+}
+.productside-left {
+  grid-area: left;
+}
+.productside-right {
+  grid-area: right;
+}
+.left-image img {
+  width: 400px;
+  height: 530px;
+  object-fit: cover;
+}
+.productside-right {
+  margin-left: 75px;
+  margin-top: 0;
+  display: grid;
+  grid-template-areas: "name name"
+                        "left right"
+                        "left-color right-color"
+                        "left-size right-size";
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+.name {
+  grid-area: name;
+  margin-bottom: 0;
+}
+.right {
+  grid-area: right;
+  color: rgb(255, 119, 8);
+}
+.left {
+  grid-area: left;
+}
+
+.left-color {
+  grid-area: left-color;
+}
+.right-color {
+  grid-area: right-color;
+}
+.right-color p {
+  margin-bottom: 20px;
+}
+.right-color li {
+  list-style: none;
+  display: inline;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.right-color li:hover {
+  background-color: #aabbaa;
+}
+.left-size {
+  grid-area: left-size;
+}
+.right-size p {
+  margin-bottom: 20px;
+}
+.right-size {
+  grid-area: right-size;
+}
+.right-size li {
+  list-style: none;
+  display: inline;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.right-size li:hover{
+  background-color: #aabbaa;
+}
+footer {
+  grid-area: footer;
+  padding-top: 30px;
+  margin-top: 10px;
+  border-top: 1px solid #000;
+}
+.button {
+  position: absolute;
+  width: 200px;
+  padding: 10px 0;
+  background-color: rgb(235, 137, 10);
+  border-radius: 7px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  text-align: center;
+  right: 0;
+  margin-right: 6em;
+  cursor: pointer;
+}
+@media (max-width:720px){
+  .product-screen {
+    grid-template-areas: "left"
+                          "right"
+                          "footer";
+  }
+}
